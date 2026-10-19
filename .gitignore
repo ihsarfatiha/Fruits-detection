@@ -1,0 +1,35 @@
+# ===== Dataset =====
+# Dataset tidak ikut ke git (ukurannya ratusan MB).
+# Struktur yang diharapkan: train/images, train/labels, valid/..., test/...
+/train/
+/valid/
+/test/
+/train_full_backup/
+
+# Cache label Ultralytics
+*.cache
+
+# ===== Model weights =====
+*.pt
+*.onnx
+*.torchscript
+# kecuali model hasil training, supaya repo bisa langsung dipakai
+!fruit_detection_runs/train/weights/best.pt
+
+# ===== Output training Ultralytics =====
+runs/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
